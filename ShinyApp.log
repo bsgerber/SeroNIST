@@ -1,0 +1,74 @@
+library paths:
+... C:/Users/sst2/OneDrive - NIST/Desktop/SERONIST_v1.0/R-Portable/App/R-Portable/library
+
+Attaching package: 'dplyr'
+
+The following objects are masked from 'package:data.table':
+
+    between, first, last
+
+The following objects are masked from 'package:stats':
+
+    filter, lag
+
+The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: 'plotly'
+
+The following object is masked from 'package:ggplot2':
+
+    last_plot
+
+The following object is masked from 'package:stats':
+
+    filter
+
+The following object is masked from 'package:graphics':
+
+    layout
+
+
+Attaching package: 'shiny'
+
+The following objects are masked from 'package:DT':
+
+    dataTableOutput, renderDataTable
+
+
+Attaching package: 'shinyjs'
+
+The following object is masked from 'package:shiny':
+
+    runExample
+
+The following object is masked from 'package:RSQLite':
+
+    show
+
+The following object is masked from 'package:DBI':
+
+    show
+
+The following object is masked from 'package:Rcpp':
+
+    show
+
+The following objects are masked from 'package:methods':
+
+    removeClass, show
+
+Loading required package: usethis
+
+Attaching package: 'reshape2'
+
+The following objects are masked from 'package:data.table':
+
+    dcast, melt
+
+There were 24 warnings (use warnings() to see them)
+Warning: Navigation containers expect a collection of `bslib::nav_panel()`/`shiny::tabPanel()`s and/or `bslib::nav_menu()`/`shiny::navbarMenu()`s. Consider using `header` or `footer` if you wish to place content above (or below) every panel's contents.
+
+Listening on http://127.0.0.1:7777

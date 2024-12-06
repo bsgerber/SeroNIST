@@ -1,0 +1,5 @@
+dependencies:
+  - name: jsoneditor
+    version: 0.18.7
+    src: htmlwidgets/jsoneditor/dist
+    script: jsoneditor.min.js

@@ -1,0 +1,221 @@
+version 1.4.1
+- expect_warning and expect_message gain argument 'strict'. This toggles
+  between failing when an exception worse than the expected one is thrown.
+  (Thanks to Joshua Ulrich for the suggestion)
+- New function 'expect_length' checks length of object (thanks to Marcel Ramos 
+  for suggesting).
+- New function 'exit_if': conditionally exit a test file, akin to stopifnot.
+  (Thanks to Grant McDermott for triggering this).
+- New function 'expect_match' to test whether string output(s) match a 
+  regular expression (Thanks to Aaron Jacobs for the suggestion).
+- package has no logo now, thanks to Reto Stauffer!
+- 'build_install_test' gains 'color' argument (thanks to Tim Taylor
+  for suggesting)
+- 'run_test_file' and 'build_install_test' gain 'encoding' argument that
+  is passed to 'parse' for reading test files (thanks to Vincent Goulet
+  for suggesting).
+- exit_file() is now safeguarded against non-character argument.
+- Fixed reporting issue for class labels on conditions. (thanks to dherz 
+  for reporting)
+- Fixed bug: multiple extension packages are now possible (thanks
+  to Vincent Arel-Bundock for the PR)
+
+
+version 1.3.1
+- expect_error, _warning, _message, _stdout now accept ... arguments
+  that are passed as extra arguments to 'grepl', when a pattern is
+  provided (Thanks to Bart-Jan van Rossum for the GH issue).
+- Package now also resets locale settings after each file run,
+  and 'report_side_effects' also tracks changes in locale settings.
+- Run test directories via RStudio addin. (Thanks to Matthijs Berends
+  for PR #83)
+- tinytest used to implicitly depend on R >= 3.2.0 because of using
+  'trimws' and 'dir.exists'. (Thanks to Sebastian Meyer for figuring
+   this out and thanks to Matthijs Berends for PR #84 solving this) 
+- 'tinytest' objects now store the stack trace as a list of calls.  When
+  needed, the relevant part of the trace is printed, but only when printing the
+  long form. (thanks to Jonas Kristoffer Lindeloef for suggesting)
+- Improved printing while running tests
+- Graphics produced in tests are now written to nullfile() (Thanks to Henrik
+  Bengtsson for the suggestion). (nullfile() is defined in-package when
+  built on R < 3.6.0).
+- Fixed time measurement when directory (or pkg) is tested and tests take more
+  than an minute.
+- Fix: set_env variables would not be unset in all cases (Thanks to Henrik
+  Bengtsson for the PR)
+- Fix in 'expect_equal': reporting in case of differing attributes (Thanks to
+  Ott Toomet for reporting #80).
+- Fix in build_install_test: better reading of DESCRIPTION file (Thanks
+  to Christof Stepper for PR #87)
+
+
+version 1.2.4
+- 'test_package' gains 'lib.loc' argument.
+- New function 'expect_inherits' to check the class of an object (thanks
+  to Sebastian Meyer for suggesting).
+- Printing of file exit message is now shorter and on same line as test
+  report (thanks for Dirk Eddelbuettel for suggesting).
+- Duration per file is now reported, total duration is stored (thanks
+  to Dirk Eddelbuettel for suggesting)
+- Small improvements in difference reporting.
+- Fix: avoid truncated printing in case of long diff reporting (thanks to
+  Sebastian Meyer for the PR)
+- Fix: default pattern for test files was "^test_", is now "^test"
+  as documented. (Thanks to Sebastian Meyer for the PR).
+- Fix: it is now easier to put tests that you do not want to
+  install under /tests/somedir.
+- Internal: updated tinytest.format method to conform to new
+  R CMD check demand. (Thanks to Brian Ripley for the warning).
+
+
+version 1.2.3
+- Added example to using tinytest vignette on mocking databases 
+  (Thanks to Thomas Fuchs for working this out).
+- 'expect_stdout' now handles multi-line output. (Thanks to John Blischak for 
+  reporting).
+- A message is issued when a test file uses 'tinytest::expect': such tests
+  are not registered (thanks to James Thompson for issuing a ticket on this).
+
+version 1.2.2
+- Improved diff reporting in expect_true, and expect_false.
+- 'build_install_test' gains arguments 'lc_collate' and 'pattern', which are
+  now passed to 'run_test_dir'. (Thanks to Patrick Breheny for reporting).
+
+
+version 1.2.1
+- expect_message() now also detects occurrence of any message, and not
+  just the first. Detecting only the first was introduced in 1.2.0 and
+  reported at GH issue #51 (Thanks to Jozef Hajnala and Ralf Herold).
+- Better 'diff' information for expect_warning() and expect_message().
+
+version 1.2.0
+- 'run_test_file' gains argument 'set_env'. Set environment variables during a
+  test run.
+- New functions 'expect_equal_to_reference' and 'expect_equivalent_to_reference'
+  comparing/storing an object with/to an RDS file (Thanks to Jon Clayden for 
+  suggesting).
+- New function 'expect_stdout' compares output of e.g. 'print' and 'cat'
+  statements to a user-defined pattern. (Thanks to Michel Lang for suggesting).
+- New function get_call_wd() returns working directory, active when tests were
+  invoked. (Thanks to Maja Zaloznik for the idea)
+- Functions 'expect_error', 'expect_warning', and 'expect_message' gain 'class'
+  argument, that can be used to check whether a signaling condition inherits
+  from a certain class. (thanks to Michel Lang for suggesting)
+- Argument 'tol' now renamed 'tolerance'. Also removed internal reliance on
+  partial argument matching (Thanks to Michel Lang).
+- Updated documentation on how to extend tinytest with new recommendation.
+- Using tinytest vignette gains section on testing internal functions.
+- Breaking: function 'expect_message' no longer intercepts messages sent
+  to stdout (e.g. via 'print' or 'cat'), but only messages send as a 'message'
+  condition (Thanks to Michel Lang for pointing this out).
+- Fix: 'test_package' would return NULL when called interactively and the package
+  contained a failing test.
+
+version 1.1.0
+- Tests are now run with 'pdf(file=tempfile())' as graphics device. This avoids
+  writing 'Rplots.pdf' under the library directory when R CMD check is run.
+- Side-effects tracking now includes file operations in the test directory or
+  subdirectories thereof.
+- build_install_test now accepts arguments 'side_effects', 'remove_side_effects'  
+- expect_* functions gain argument 'info': a user-defined message that is
+  printed in long output format.
+- 'run_test_dir' now selects files with "^test.*\\.[rR]$", not "^test.*\\.[rR]" 
+  (thanks to Dirk Eddelbuettel).
+- Fixed 'diff' message for scalar comparisons in expect_equivalent,
+  expect_equal, expect_identical: 'target' and 'current' were switched in
+  message (thanks to GH user Billy34).
+- 'setup_tinytest' now keeps formatting for DESCRIPTION files (thanks to
+  Bart-Jan van Rossum).
+- Fixed crash of 'build_install_test' when pkg was developed under directory
+  with spaces (thanks to Bart-Jan van Rossum).
+- Fixed issue where R CMD check would hang when packages use paralellization (GH #36)
+  or certain Rcpp features (GH #37). Thanks to George G Vega Yon and Dirk Eddelbuettel.
+
+
+version 1.0.0
+- New argument 'side_effects' for test runners: monitor side effects while running tests.
+- New function 'report_side_effects': toggle monitoring side-effects within test files.
+- Run test files in parallel, for example: test_package("pkg", ncpu=2). (Thanks
+  to Dirk Eddelbuettel for the suggestion).
+- New function 'exit_file':  stop running a test file with an optional message.
+- Other packages can now extend the package, see '?register_tinytest_extension'
+  for the API (Thanks to Michel Lang for the suggestion)
+- New function 'using' loads tinytest extension package.
+- New function 'expect_null'
+- Improved reporting for 'expect_true', 'expect_false'
+- Improved reporting for expect_identical, expect_true, expect_equivalent
+  in the case of scalar values.
+- Added second vignette with real-life examples of tinytest tests.
+- build_install_test gains argument 'color' and 'verbose'
+- test_package returns result visibly in interactive sessions.
+- Fixed path issue for build_install_test on Windows (thanks to Jan Wijffels)
+
+
+version 0.9.6
+- Fixed error caught on CRAN
+
+version 0.9.5
+- New function 'expect_message'.
+- New functions 'all_pass', 'all_fail', 'any_pass', 'any_fail' for investigating
+  'tinytests' objects.
+- When `interactive()`, 'test_package' will not throw an error upon a failing
+  test. Still throws an error when not `interactive()`. This makes it more
+  usefull for interactive testing of installed packages.
+- 'test_package()' now returns a 'tinytests' object.
+- Better 'verbosity' while running test files (thanks to Dirk Eddelbuettel for
+  discussions and feedback)
+- Added 'test_silent'. Check for lack of errors or warnings (Thanks to Bryan
+  Hanson for the suggestion, #14)
+- Colored output is turned off automatically when the pkg is loaded
+  in a "dumb" terminal. (Thanks to Dirk Eddelbeutel for the suggestion, #12).
+- Improved documentation, including on how to skip tests on CRAN.
+- Improved vignette layout (thanks to Dirk Eddelbuettel's suggestions and initial 
+  PR #15 for geometry settings)
+- Improved behavior of 'setup_tinytest()' when a 'Suggests' field is
+  already present in DESCRIPTION
+- Fix: toleracence was not passed to 'all.equal' by 'expect_equal' and 
+  'expect_equivalent' (Thanks to An Chu #17)
+- Fix 'expect_warning' and 'expect_error' would crash when run on the CLI.
+  (Thanks to Bryan Hanson #13)
+- Fix: method dispatch in packages defining S4 methods now works.
+- Fix: 'setup' now adds 'tinytest' to 'Suggests:' rather then adding an
+  extra 'Suggests' field in DESCRIPTION.
+- Corrections in README and vignette, thanks to GH user 'salim-b' PR #18, #19
+- Internal: simplified code for 'expect_warning' and 'expect_error' 
+  (thanks to Lionel Henry for suggestions).
+
+version 0.9.4
+- New function 'setup_tinytest' that adds 'tinytest' infrastructure to a
+  package source directory.
+- Global settings set by 'options' and 'Sys.setenv' in a test file are
+  automatically removed after running a test file. This improves independence
+  between test files. This default can be overwritten, see Chapter 3 of the
+  'Using tinytest' vignette.
+- Test file sorting order can be controlled with 'lc_collate' option in test
+  runners or by setting options(tt.collate) globally.
+- More control over testing packages in 'R CMD check' with extra arguments
+  to 'test_packages'.
+- Improved call reporting in case of multiline test expressions (for example
+  when many test expressions depend on an 'if' condition).
+- Fix in 'expect_warning' and 'expect_error'. In some circumstances evaluation 
+  argument 'current' evaluated in the wrong scope, resulting in unfound variables.
+
+version 0.9.3 
+- New function 'expect_identical'
+- All functions of the form 'expect_lol' can now also be called as 'checkLol' 
+  (similar to, but not the same as 'RUnit' syntax)
+- Expect_* functions now have first argument 'current' and second argument 'target'
+- Added 'summary' method for objects of class 'tinytests'
+- Default test directory is now 'inst/tinytest'
+- Fix: 'as.data.frame' crashed on tinytests object with all tests passing.
+
+version 0.9.2
+- Processed review by CRAN team member.
+- Output coloring is now optional.
+- Fixed issue so package works correctly with r-oldrel.
+
+version 0.9.1
+- Fixed a few CRAN warnings.
+
+version 0.9.0
+- Initial release.

@@ -1,0 +1,9 @@
+Element                 HTML element
+Session                 WebDriver session
+Window                  A browser window
+install_phantomjs       Install PhantomJS
+key                     Special keys, so that we can refer to them with
+                        an easier syntax
+run_phantomjs           Start up phantomjs on localhost, and a random
+                        port
+webdriver               'WebDriver' Client for 'PhantomJS'

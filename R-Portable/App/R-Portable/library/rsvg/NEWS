@@ -1,0 +1,74 @@
+2.6.0
+  - Fix a resizing bug with rsvg_svg() see #41
+  - MacOS: update to librsvg 2.56.3
+  - Windows: update to librsvg 2.57.0
+  - Add some tests
+
+2.5.0
+  - Windows: update to librsvg 2.50.5 and fix rendering of embedded
+    png/jpeg/tiff images.
+
+2.4.0
+  - Fix scaling bug for librsvg 2.52+
+
+2.3.2
+  - Fix strict-prototypes warnings
+
+2.3.1
+  - Fix UBSAN error in rsvg_nativeraster
+  - Set viewport sizing for document rendering #32
+
+2.3.0
+  - Add function `rsvg_nativeraster()` tnx mikefc
+
+2.2.0
+  - Add `rsvg_eps()` which converts to Encapsulated PostScript (EPS) format (@salim-b)
+  - Fix some deprecation warnings
+
+2.1.2
+  - Windows: update to librsvg v2.48.8
+  - Add ucrt64 support
+
+2.1.1
+  - CRAN stuff
+
+2.1
+  - Expose 'css' parameter
+  - Add vignette 'Rendering SVG with CSS in R'
+
+2.0
+  - Windows, Mac: upgrade to librsvg 2.48.4. This is a major upgrade, librsvg
+    has been rewritten completely in rust based on Mozilla Servo.
+
+1.3
+  - Upgraded autobrew to 2.42.2 with custom bottle
+
+1.2
+  - MacOS: use librsvg 2.40.19 because 2.42 has static linking bug
+
+1.1
+  - Fix the configure script to use legacybrew on OSX 10.9 for CRAN
+
+1.0
+  - Upgrade to fully static librsvg 2.40.16 build on Windows
+  - Fixed a bug that could cause a freeze or segfault with old versions of librsvg
+
+0.6
+  - Update Homebrew URL in configure script
+  - Change autobrew to --force-bottle dependencies and use current glib2
+  - Add '-framework AppKit' to PKG_LIBS for OSX static binary (needed by CMD check)
+
+0.5
+  - Fix for Warning on OSX CRAN builder.
+  - Minor tweaks to configure script
+
+0.4
+  - Fix autobrew script for Snow Leopard
+
+0.3
+  - Add output formats rsvg_png() rsvg_pdf() rsvg_ps() rsvg_svg()
+  - Fix for rounding issue in proportional image scaling
+  - Add support for url in rsvg()
+
+0.2
+  - Initial CRAN release with Windows support

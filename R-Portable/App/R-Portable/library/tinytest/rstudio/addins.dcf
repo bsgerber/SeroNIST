@@ -1,0 +1,4 @@
+Name: Run all package tests
+Description: Runs all tests in ./inst/description
+Binding: test_all
+Interactive: false

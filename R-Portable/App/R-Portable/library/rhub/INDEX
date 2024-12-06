@@ -1,0 +1,18 @@
+check                   Check an R package on R-hub
+check_for_cran          Check an R-package on R-hub, for a CRAN
+                        submission
+check_on_linux          Check an R package on an R-hub platform
+get_check               Retrieve the result of R-hub checks
+last_check              The last rhub check of this R session
+list_my_checks          List all checks for an email address
+list_package_checks     List checks of a package
+list_validated_emails   List validated email addresses
+local_check_linux       Run a package check locally, in a Docker
+                        container
+local_check_linux_images
+                        List R-hub Docker images
+platforms               List all R-hub platforms
+rhub-ids                R-hub check ids
+rhub_check              An 'rhub_check' object holds status and results
+                        of rhub checks
+validate_email          Validate an email address on R-hub

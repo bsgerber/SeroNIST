@@ -1,0 +1,23 @@
+at_home                 Detect not on CRANity
+build_install_test      build, install and test
+exit_file               Stop testing (conditionally)
+expect_equal            Express expectations
+expect_equal_to_reference
+                        Compare object with object stored in a file
+expect_length           Check length of an object
+expect_match            Match strings to a regular expression
+format.tinytest         Print a tinytest object
+get_call_wd             Get workding dir from where a test was
+                        initiated
+ignore                  Ignore the output of an expectation
+register_tinytest_extension
+                        Register or unregister extension functions
+report_side_effects     Report side effects for expressions in test
+                        files
+run_test_dir            Run all tests in a directory
+run_test_file           Run an R file containing tests; gather results
+setup_tinytest          Add tinytest to package source directory
+summary.tinytests       Tinytests object
+test_package            Test a package during R CMD check or after
+                        installation
+using                   Use an extension package.

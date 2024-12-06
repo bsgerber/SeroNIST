@@ -1,0 +1,8 @@
+citation(auto = meta)
+
+bibentry(bibtype = "Book",
+         title = "Ecological Models and Data in R",
+         author = person(c("Benjamin", "M."),  "Bolker"),
+         year = "2008",
+         publisher="Princeton University Press")
+

@@ -1,0 +1,50 @@
+as.character.mime       Convert a mime object to character
+                        representation
+gm_attachment           Retrieve an attachment to a message
+gm_attachments          Retrieve information about attachments
+gm_auth                 Authorize gmailr
+gm_auth_configure       Edit auth configuration
+gm_body                 Get the body text of a message or draft
+gm_create_draft         Create a draft from a mime message
+gm_create_label         Create a new label
+gm_deauth               Clear current token
+gm_delete_draft         Permanently delete a single draft
+gm_delete_label         Permanently delete a label
+gm_delete_message       Permanently delete a single message
+gm_delete_thread        Permanently delete a single thread.
+gm_draft                Get a single draft
+gm_drafts               Get a list of drafts
+gm_has_token            Is there a token on hand?
+gm_history              Retrieve change history for the inbox
+gm_id                   Get the id of a gmailr object
+gm_import_message       Import a message into the gmail mailbox from a
+                        mime message
+gm_insert_message       Insert a message into the gmail mailbox from a
+                        mime message
+gm_label                Get a specific label
+gm_labels               Get a list of all labels
+gm_last_response        Response from the last query
+gm_message              Get a single message
+gm_messages             Get a list of messages
+gm_mime                 Create a mime formatted message object
+gm_modify_message       Modify the labels on a message
+gm_modify_thread        Modify the labels on a thread
+gm_profile              Get info on current gmail profile
+gm_save_attachment      Save the attachment to a file
+gm_save_attachments     Save attachments to a message
+gm_scopes               Produce scopes specific to the Gmail API
+gm_send_draft           Send a draft
+gm_send_message         Send a message from a mime message
+gm_thread               Get a single thread
+gm_threads              Get a list of threads
+gm_to                   Methods to get values from message or drafts
+gm_token                Produce configured token
+gm_token_write          Write/read a gmailr user token
+gm_trash_message        Send a single message to the trash
+gm_trash_thread         Send a single thread to the trash
+gm_untrash_message      Remove a single message from the trash
+gm_untrash_thread       Remove a single thread from the trash.
+gm_update_label         Update a existing label.
+gmailr-configuration    Configuring gmailr
+quoted_printable_encode
+                        Encode text using quoted printable

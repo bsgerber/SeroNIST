@@ -1,0 +1,10 @@
+ShinyDriver             Remote control a Shiny app running in a
+                        headless browser
+Widget                  A Shiny Widget
+dependenciesInstalled   Checks for/installs dependencies
+expect_pass             Expectation: 'testApp()' passes snapshot tests
+migrateShinytestDir     Migrate legacy 'shinytest' files to new test
+                        directory structure
+osName                  Get the name of the OS
+recordTest              Launch test event recorder for a Shiny app
+testApp                 Run tests for a Shiny application

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head><title>R: Access the 'Gmail' 'RESTful' API</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+<h1> Access the 'Gmail' 'RESTful' API
+<img class="toplogo" src="../../../doc/html/Rlogo.svg" alt="[R logo]" />
+</h1>
+<hr/>
+<div style="text-align: center;">
+<a href="../../../doc/html/packages.html"><img class="arrow" src="../../../doc/html/left.jpg" alt="[Up]" /></a>
+<a href="../../../doc/html/index.html"><img class="arrow" src="../../../doc/html/up.jpg" alt="[Top]" /></a>
+</div><h2>Documentation for package &lsquo;gmailr&rsquo; version 2.0.0</h2>
+
+<ul><li><a href="../DESCRIPTION">DESCRIPTION file</a>.</li>
+<li><a href="../doc/index.html">User guides, package vignettes and other documentation.</a></li>
+<li><a href="../NEWS">Package NEWS</a>.</li>
+</ul>
+
+<h2>Help Pages</h2>
+
+
+<table style="width: 100%;">
+<tr><td style="width: 25%;"><a href="as.character.mime.html">as.character.mime</a></td>
+<td>Convert a mime object to character representation</td></tr>
+<tr><td style="width: 25%;"><a href="gmailr-configuration.html">gmailr-configuration</a></td>
+<td>Configuring gmailr</td></tr>
+<tr><td style="width: 25%;"><a href="gm_attachment.html">gm_attachment</a></td>
+<td>Retrieve an attachment to a message</td></tr>
+<tr><td style="width: 25%;"><a href="gm_attachments.html">gm_attachments</a></td>
+<td>Retrieve information about attachments</td></tr>
+<tr><td style="width: 25%;"><a href="gm_mime.html">gm_attach_file</a></td>
+<td>Create a mime formatted message object</td></tr>
+<tr><td style="width: 25%;"><a href="gm_mime.html">gm_attach_part</a></td>
+<td>Create a mime formatted message object</td></tr>
+<tr><td style="width: 25%;"><a href="gm_auth.html">gm_auth</a></td>
+<td>Authorize gmailr</td></tr>
+<tr><td style="width: 25%;"><a href="gm_auth_configure.html">gm_auth_configure</a></td>
+<td>Edit auth configuration</td></tr>
+<tr><td style="width: 25%;"><a href="accessors.html">gm_bcc</a></td>
+<td>Methods to get values from message or drafts</td></tr>
+<tr><td style="width: 25%;"><a href="gm_mime.html">gm_bcc.mime</a></td>
+<td>Create a mime formatted message object</td></tr>
+<tr><td style="width: 25%;"><a href="gm_body.html">gm_body</a></td>
+<td>Get the body text of a message or draft</td></tr>
+<tr><td style="width: 25%;"><a href="accessors.html">gm_cc</a></td>
+<td>Methods to get values from message or drafts</td></tr>
+<tr><td style="width: 25%;"><a href="gm_mime.html">gm_cc.mime</a></td>
+<td>Create a mime formatted message object</td></tr>
+<tr><td style="width: 25%;"><a href="gm_create_draft.html">gm_create_draft</a></td>
+<td>Create a draft from a mime message</td></tr>
+<tr><td style="width: 25%;"><a href="gm_create_label.html">gm_create_label</a></td>
+<td>Create a new label</td></tr>
+<tr><td style="width: 25%;"><a href="accessors.html">gm_date</a></td>
+<td>Methods to get values from message or drafts</td></tr>
+<tr><td style="width: 25%;"><a href="gm_deauth.html">gm_deauth</a></td>
+<td>Clear current token</td></tr>
+<tr><td style="width: 25%;"><a href="gmailr-configuration.html">gm_default_email</a></td>
+<td>Configuring gmailr</td></tr>
+<tr><td style="width: 25%;"><a href="gmailr-configuration.html">gm_default_oauth_client</a></td>
+<td>Configuring gmailr</td></tr>
+<tr><td style="width: 25%;"><a href="gm_delete_draft.html">gm_delete_draft</a></td>
+<td>Permanently delete a single draft</td></tr>
+<tr><td style="width: 25%;"><a href="gm_delete_label.html">gm_delete_label</a></td>
+<td>Permanently delete a label</td></tr>
+<tr><td style="width: 25%;"><a href="gm_delete_message.html">gm_delete_message</a></td>
+<td>Permanently delete a single message</td></tr>
+<tr><td style="width: 25%;"><a href="gm_delete_thread.html">gm_delete_thread</a></td>
+<td>Permanently delete a single thread.</td></tr>
+<tr><td style="width: 25%;"><a href="gm_draft.html">gm_draft</a></td>
+<td>Get a single draft</td></tr>
+<tr><td style="width: 25%;"><a href="gm_drafts.html">gm_drafts</a></td>
+<td>Get a list of drafts</td></tr>
+<tr><td style="width: 25%;"><a href="accessors.html">gm_from</a></td>
+<td>Methods to get values from message or drafts</td></tr>
+<tr><td style="width: 25%;"><a href="gm_mime.html">gm_from.mime</a></td>
+<td>Create a mime formatted message object</td></tr>
+<tr><td style="width: 25%;"><a href="gm_has_token.html">gm_has_token</a></td>
+<td>Is there a token on hand?</td></tr>
+<tr><td style="width: 25%;"><a href="gm_history.html">gm_history</a></td>
+<td>Retrieve change history for the inbox</td></tr>
+<tr><td style="width: 25%;"><a href="gm_mime.html">gm_html_body</a></td>
+<td>Create a mime formatted message object</td></tr>
+<tr><td style="width: 25%;"><a href="gm_id.html">gm_id</a></td>
+<td>Get the id of a gmailr object</td></tr>
+<tr><td style="width: 25%;"><a href="gm_id.html">gm_id.gmail_messages</a></td>
+<td>Get the id of a gmailr object</td></tr>
+<tr><td style="width: 25%;"><a href="gm_import_message.html">gm_import_message</a></td>
+<td>Import a message into the gmail mailbox from a mime message</td></tr>
+<tr><td style="width: 25%;"><a href="gm_insert_message.html">gm_insert_message</a></td>
+<td>Insert a message into the gmail mailbox from a mime message</td></tr>
+<tr><td style="width: 25%;"><a href="gm_label.html">gm_label</a></td>
+<td>Get a specific label</td></tr>
+<tr><td style="width: 25%;"><a href="gm_labels.html">gm_labels</a></td>
+<td>Get a list of all labels</td></tr>
+<tr><td style="width: 25%;"><a href="gm_last_response.html">gm_last_response</a></td>
+<td>Response from the last query</td></tr>
+<tr><td style="width: 25%;"><a href="gm_message.html">gm_message</a></td>
+<td>Get a single message</td></tr>
+<tr><td style="width: 25%;"><a href="gm_messages.html">gm_messages</a></td>
+<td>Get a list of messages</td></tr>
+<tr><td style="width: 25%;"><a href="gm_mime.html">gm_mime</a></td>
+<td>Create a mime formatted message object</td></tr>
+<tr><td style="width: 25%;"><a href="gm_modify_message.html">gm_modify_message</a></td>
+<td>Modify the labels on a message</td></tr>
+<tr><td style="width: 25%;"><a href="gm_modify_thread.html">gm_modify_thread</a></td>
+<td>Modify the labels on a thread</td></tr>
+<tr><td style="width: 25%;"><a href="gm_auth_configure.html">gm_oauth_client</a></td>
+<td>Edit auth configuration</td></tr>
+<tr><td style="width: 25%;"><a href="gm_profile.html">gm_profile</a></td>
+<td>Get info on current gmail profile</td></tr>
+<tr><td style="width: 25%;"><a href="gm_save_attachment.html">gm_save_attachment</a></td>
+<td>Save the attachment to a file</td></tr>
+<tr><td style="width: 25%;"><a href="gm_save_attachments.html">gm_save_attachments</a></td>
+<td>Save attachments to a message</td></tr>
+<tr><td style="width: 25%;"><a href="gm_scopes.html">gm_scopes</a></td>
+<td>Produce scopes specific to the Gmail API</td></tr>
+<tr><td style="width: 25%;"><a href="gm_send_draft.html">gm_send_draft</a></td>
+<td>Send a draft</td></tr>
+<tr><td style="width: 25%;"><a href="gm_send_message.html">gm_send_message</a></td>
+<td>Send a message from a mime message</td></tr>
+<tr><td style="width: 25%;"><a href="accessors.html">gm_subject</a></td>
+<td>Methods to get values from message or drafts</td></tr>
+<tr><td style="width: 25%;"><a href="gm_mime.html">gm_subject.mime</a></td>
+<td>Create a mime formatted message object</td></tr>
+<tr><td style="width: 25%;"><a href="gm_mime.html">gm_text_body</a></td>
+<td>Create a mime formatted message object</td></tr>
+<tr><td style="width: 25%;"><a href="gm_thread.html">gm_thread</a></td>
+<td>Get a single thread</td></tr>
+<tr><td style="width: 25%;"><a href="gm_threads.html">gm_threads</a></td>
+<td>Get a list of threads</td></tr>
+<tr><td style="width: 25%;"><a href="accessors.html">gm_to</a></td>
+<td>Methods to get values from message or drafts</td></tr>
+<tr><td style="width: 25%;"><a href="gm_mime.html">gm_to.mime</a></td>
+<td>Create a mime formatted message object</td></tr>
+<tr><td style="width: 25%;"><a href="gm_token.html">gm_token</a></td>
+<td>Produce configured token</td></tr>
+<tr><td style="width: 25%;"><a href="gm_token_write.html">gm_token_read</a></td>
+<td>Write/read a gmailr user token</td></tr>
+<tr><td style="width: 25%;"><a href="gm_token_write.html">gm_token_write</a></td>
+<td>Write/read a gmailr user token</td></tr>
+<tr><td style="width: 25%;"><a href="gm_trash_message.html">gm_trash_message</a></td>
+<td>Send a single message to the trash</td></tr>
+<tr><td style="width: 25%;"><a href="gm_trash_thread.html">gm_trash_thread</a></td>
+<td>Send a single thread to the trash</td></tr>
+<tr><td style="width: 25%;"><a href="gm_untrash_message.html">gm_untrash_message</a></td>
+<td>Remove a single message from the trash</td></tr>
+<tr><td style="width: 25%;"><a href="gm_untrash_thread.html">gm_untrash_thread</a></td>
+<td>Remove a single thread from the trash.</td></tr>
+<tr><td style="width: 25%;"><a href="gm_update_label.html">gm_update_label</a></td>
+<td>Update a existing label.</td></tr>
+<tr><td style="width: 25%;"><a href="gm_update_label.html">gm_update_label_patch</a></td>
+<td>Update a existing label.</td></tr>
+<tr><td style="width: 25%;"><a href="quoted_printable_encode.html">quoted_printable_encode</a></td>
+<td>Encode text using quoted printable</td></tr>
+</table>
+</div></body></html>
