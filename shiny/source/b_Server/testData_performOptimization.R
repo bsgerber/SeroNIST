@@ -308,7 +308,7 @@ observeEvent(input$testData_evalTabSubmitBtn, {
     rv$evaluateResultsSumm = thisRes
     # Return what will be displayed
     thisRes
-  }, rownames = TRUE)
+  }, digits = 6, rownames = TRUE)
   
   # Display boundaries resulting from evaluation over test data
   output$testDataTrainingTabs <- testData_renderEvaluatorTables()
